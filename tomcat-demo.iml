@@ -11,7 +11,25 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://D:/programfile/Tomcat 8.0/lib/servlet-api.jar!/" />
+          <root url="jar://D:/programs/Tomcat8.5/lib/servlet-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/programs/Tomcat8.5/lib/catalina.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/programs/Tomcat8.5/bin/tomcat-juli.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

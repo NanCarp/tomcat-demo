@@ -1,46 +1,51 @@
 package ex04.pyrmont.core;
-import org.apache.catalina.*;
-import org.apache.catalina.connector.Request;
-import org.apache.catalina.connector.Response;
-import org.apache.juli.logging.Log;
 
-import javax.management.ObjectName;
+
+import org.apache.catalina.*;
+
+import javax.naming.directory.DirContext;
 import java.beans.PropertyChangeListener;
-import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by NanCarp on 2017/5/11.
  */
-public class SimpleContainer implements Container{
+public class SimpleContainer implements Container {
+
 
     @Override
-    public Log getLogger() {
+    public String getInfo() {
         return null;
     }
 
     @Override
-    public String getLogName() {
+    public Loader getLoader() {
         return null;
     }
 
     @Override
-    public ObjectName getObjectName() {
+    public void setLoader(Loader loader) {
+
+    }
+
+    @Override
+    public Logger getLogger() {
         return null;
     }
 
     @Override
-    public String getDomain() {
+    public void setLogger(Logger logger) {
+
+    }
+
+    @Override
+    public Manager getManager() {
         return null;
     }
 
     @Override
-    public String getMBeanKeyProperties() {
-        return null;
-    }
+    public void setManager(Manager manager) {
 
-    @Override
-    public Pipeline getPipeline() {
-        return null;
     }
 
     @Override
@@ -54,22 +59,12 @@ public class SimpleContainer implements Container{
     }
 
     @Override
-    public int getBackgroundProcessorDelay() {
-        return 0;
-    }
-
-    @Override
-    public void setBackgroundProcessorDelay(int i) {
-
-    }
-
-    @Override
     public String getName() {
         return null;
     }
 
     @Override
-    public void setName(String s) {
+    public void setName(String name) {
 
     }
 
@@ -89,7 +84,7 @@ public class SimpleContainer implements Container{
     }
 
     @Override
-    public void setParentClassLoader(ClassLoader classLoader) {
+    public void setParentClassLoader(ClassLoader parent) {
 
     }
 
@@ -104,27 +99,37 @@ public class SimpleContainer implements Container{
     }
 
     @Override
-    public void backgroundProcess() {
+    public DirContext getResources() {
+        return null;
+    }
+
+    @Override
+    public void setResources(DirContext resources) {
 
     }
 
     @Override
-    public void addChild(Container container) {
+    public void addChild(Container child) {
 
     }
 
     @Override
-    public void addContainerListener(ContainerListener containerListener) {
+    public void addContainerListener(ContainerListener listener) {
 
     }
 
     @Override
-    public void addPropertyChangeListener(PropertyChangeListener propertyChangeListener) {
+    public void addMapper(Mapper mapper) {
 
     }
 
     @Override
-    public Container findChild(String s) {
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+
+    }
+
+    @Override
+    public Container findChild(String name) {
         return null;
     }
 
@@ -139,97 +144,42 @@ public class SimpleContainer implements Container{
     }
 
     @Override
-    public void removeChild(Container container) {
-
-    }
-
-    @Override
-    public void removeContainerListener(ContainerListener containerListener) {
-
-    }
-
-    @Override
-    public void removePropertyChangeListener(PropertyChangeListener propertyChangeListener) {
-
-    }
-
-    @Override
-    public void fireContainerEvent(String s, Object o) {
-
-    }
-
-    @Override
-    public void logAccess(Request request, Response response, long l, boolean b) {
-
-    }
-
-    @Override
-    public AccessLog getAccessLog() {
+    public Mapper findMapper(String protocol) {
         return null;
     }
 
     @Override
-    public int getStartStopThreads() {
-        return 0;
+    public Mapper[] findMappers() {
+        return new Mapper[0];
     }
 
     @Override
-    public void setStartStopThreads(int i) {
+    public void invoke(Request request, Response response) throws IOException, ServletException {
 
     }
 
     @Override
-    public File getCatalinaBase() {
+    public Container map(Request request, boolean update) {
         return null;
     }
 
     @Override
-    public File getCatalinaHome() {
-        return null;
-    }
-
-    @Override
-    public void addLifecycleListener(LifecycleListener lifecycleListener) {
+    public void removeChild(Container child) {
 
     }
 
     @Override
-    public LifecycleListener[] findLifecycleListeners() {
-        return new LifecycleListener[0];
-    }
-
-    @Override
-    public void removeLifecycleListener(LifecycleListener lifecycleListener) {
+    public void removeContainerListener(ContainerListener listener) {
 
     }
 
     @Override
-    public void init() throws LifecycleException {
+    public void removeMapper(Mapper mapper) {
 
     }
 
     @Override
-    public void start() throws LifecycleException {
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
 
-    }
-
-    @Override
-    public void stop() throws LifecycleException {
-
-    }
-
-    @Override
-    public void destroy() throws LifecycleException {
-
-    }
-
-    @Override
-    public LifecycleState getState() {
-        return null;
-    }
-
-    @Override
-    public String getStateName() {
-        return null;
     }
 }

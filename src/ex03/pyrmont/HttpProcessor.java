@@ -1,4 +1,4 @@
-package ex03.pymont;
+package ex03.pyrmont;
 
 import java.io.IOException;
 import java.io.OutputStream;

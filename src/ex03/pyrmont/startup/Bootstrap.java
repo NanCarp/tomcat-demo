@@ -1,11 +1,10 @@
 package ex03.pyrmont.startup;
 
-/**
- * Created by nanca on 5/9/2017.
- */
+import ex03.pyrmont.connector.http.HttpConnector;
+
 public final class Bootstrap {
-    public static void main(String[] args) {
-        HttpConnector Connector = new HttpConnector();
-        connector.start();
-    }
+  public static void main(String[] args) {
+    HttpConnector connector = new HttpConnector();
+    connector.start();
+  }
 }
